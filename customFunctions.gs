@@ -12,7 +12,7 @@ function recordAttendance() {
   var historySheet = SpreadsheetApp.getActive().getSheetByName("history");
   var columnPos = historySheet.getLastColumn();
   var currentRow = 2;
-  while (currentRow < 997) {
+  while (currentRow <= 997) {
     if (signInSheet.getRange(currentRow, 3).isChecked()) {
       historySheet.getRange(currentRow, columnPos).setValue("x");
     }
