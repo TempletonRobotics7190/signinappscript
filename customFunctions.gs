@@ -11,7 +11,7 @@ function recordAttendance() {
   var signInSheet = SpreadsheetApp.getActive().getSheetByName("signin");
   var historySheet = SpreadsheetApp.getActive().getSheetByName("history");
   var columnPos = historySheet.getLastColumn();
-  let currentRow = 2;
+  var currentRow = 2;
   while (currentRow < 997) {
     if (signInSheet.getRange(currentRow, 3).isChecked()) {
       historySheet.getRange(currentRow, columnPos).setValue("x");
